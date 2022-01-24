@@ -1,0 +1,45 @@
+﻿@model IEnumerable<YaAPIRoutes.Models.Courier>
+
+@{
+    ViewData["Title"] = "Список курьеров:";
+}
+
+<h1>Список курьеров</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                № п/п
+            </th>
+            <th>
+                № ID курьера
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+@{
+    int count = 0;
+    foreach (var item in Model)
+    {
+        count++;        
+        <tr>
+        <td>
+                @count.
+        </td>
+            
+        <td>
+               
+                <a asp-action="Details" asp-route-id="@item.Id">@item.Venicle_Id</a> 
+                
+        </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>
